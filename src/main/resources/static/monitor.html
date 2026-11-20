@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conexão Edu — Monitoramento</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f5f7fb;
+      color: #1a1a1a;
+    }
+    .monitor-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    h1 {
+      color: #0040B8;
+      margin-bottom: 8px;
+    }
+    .subtitulo {
+      color: #666;
+      margin-bottom: 24px;
+    }
+    .eventos-list {
+      background: #fff;
+      border: 1px solid #dbe3f0;
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 200px;
+    }
+    .evento-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #eef2f8;
+      font-size: 14px;
+    }
+    .evento-item:last-child {
+      border-bottom: none;
+    }
+    .vazio {
+      color: #888;
+      font-size: 14px;
+    }
+    .links {
+      margin-top: 24px;
+      font-size: 14px;
+    }
+    .links a {
+      color: #0040B8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body onload="iniciarMonitor()">
+  <div class="monitor-page">
+    <h1>Painel de Monitoramento</h1>
+    <p class="subtitulo">Eventos recebidos via RabbitMQ (atualização a cada 3 segundos)</p>
+    <div id="eventos-list" class="eventos-list">
+      <p class="vazio">Carregando eventos...</p>
+    </div>
+    <p class="links">
+      <a href="index.html">Voltar ao login</a> ·
+      <a href="app.html">Ir para o app</a>
+    </p>
+  </div>
+  <script src="monitor.js"></script>
+</body>
+</html>

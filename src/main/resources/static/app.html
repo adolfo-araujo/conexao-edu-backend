@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conexão Edu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="verificarSessao()">
+<div id="app-page" class="app-page">
+  <nav class="sidebar">
+    <img class="logo-box" src="assets/Feed/Vector 3.svg" alt="">
+    <span class="logo-text">Conexão Edu</span>
+    <a class="nav-item nav-inicio nav-item--active" onclick="navigate('feed')">
+      <img class="nav-icon-svg" src="assets/Feed/Solid/General/Home.svg" alt="">
+      <span>Início</span>
+    </a>
+    <a class="nav-item nav-disciplinas" onclick="navigate('disciplinas')">
+      <img class="nav-icon-svg" src="assets/Feed/Solid/Files/Book-mark.svg" alt="">
+      <span>Disciplinas</span>
+    </a>
+    <a class="nav-item nav-calendario" onclick="navigate('calendario')">
+      <img class="nav-icon-svg" src="assets/Feed/ph_calendar-fill.svg" alt="">
+      <span>Calendário</span>
+    </a>
+    <a class="nav-item nav-ranking" onclick="navigate('ranking')">
+      <img class="nav-icon-svg nav-icon-rank" src="assets/Feed/iconoir_medal-1st-solid.svg" alt="">
+      <span>Ranking</span>
+    </a>
+  </nav>
+
+  <div class="topbar">
+    <img class="topbar-icon-svg" src="assets/Feed/Solid/Communication/Envelope.svg" alt="">
+    <img class="topbar-icon-svg" src="assets/Feed/Solid/Interface/Settings-alt.svg" alt="">
+    <img class="avatar-top" src="assets/Calendario/user.svg" alt="Avatar">
+  </div>
+
+  <div class="app-content">
+    <div id="page-feed" class="page page--active">
+      <h2 id="greeting-app" class="greeting">Olá, Usuário!</h2>
+      <div class="feed-grid">
+        <div class="feed-card">
+          <h3 class="card-title">Próximos Eventos:</h3>
+          <div class="evento-item">IV Colóquio Internacional Aprendizados ao longo da vida - 17/09</div>
+          <div class="evento-item">XVI Simpósio de Ciência, Inovação e Tecnologia - 25/09</div>
+          <div class="evento-item">VII Congresso Internacional de Educação Física e Desportos - 26/09</div>
+        </div>
+        <div class="feed-card">
+          <h3 class="card-title">Alunos Destaque:</h3>
+          <div class="destaque-item">
+            <img src="assets/Feed/Component.svg" alt="" class="destaque-medal-img">
+            <span class="destaque-name">Lays Ferreira</span>
+          </div>
+          <div class="destaque-item">
+            <img src="assets/Calendario/user.svg" alt="" class="avatar-redondo">
+            <span class="destaque-name">Guilherme Augusto</span>
+          </div>
+          <div class="destaque-item">
+            <img src="assets/Feed/Component.svg" alt="" class="destaque-medal-img">
+            <span class="destaque-name">Vitor Dias</span>
+          </div>
+        </div>
+        <div class="feed-card feed-card--white">
+          <h3 class="card-title">Comunidade:</h3>
+          <div id="community-list">
+          <div class="comentario">
+            <img src="assets/Calendario/user.svg" alt="" class="comentario-avatar-svg">
+            <div><span class="comentario-user">Lima:</span> <span class="comentario-texto">Análise espacial é loucura.</span></div>
+          </div>
+          <div class="comentario">
+            <img src="assets/Calendario/user.svg" alt="" class="comentario-avatar-svg">
+            <div><span class="comentario-user">Guilherme:</span> <span class="comentario-texto">Eu gostei bastante!</span></div>
+          </div>
+          <div class="comentario">
+            <img src="assets/Calendario/user.svg" alt="" class="comentario-avatar-svg">
+            <div><span class="comentario-user">Caio:</span> <span class="comentario-texto">Vou cursar direito, desisto da engenharia.</span></div>
+          </div>
+          </div>
+        </div>
+        <div class="feed-card feed-card--white">
+          <h3 class="card-title">Agenda:</h3>
+          <div class="agenda-item">
+            <img src="assets/Feed/Outline/Interface/Check.svg" alt="" class="checkbox-img">
+            <span class="agenda-text">Entrega Roteiro A-4 - Análise espacial</span>
+          </div>
+          <div class="agenda-item">
+            <img src="assets/Feed/Outline/Interface/Check.svg" alt="" class="checkbox-img">
+            <span class="agenda-text">AVA 2 - Construção do Pensamento</span>
+          </div>
+          <div class="agenda-item">
+            <img src="assets/Feed/Outline/Interface/Check.svg" alt="" class="checkbox-img">
+            <span class="agenda-text">Apresentação - Engenharia: Da Idéia à Concepção</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-disciplinas" class="page">
+      <h2 class="greeting">Disciplinas</h2>
+      <div class="disc-grid" id="disciplinas-list">
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/tabler_square-root-2.svg" alt=""><span class="disc-card-name">Matemática</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/icomoon-free_lab.svg" alt=""><span class="disc-card-name">Ciências</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/fluent-emoji-high-contrast_world-map.svg" alt=""><span class="disc-card-name">Geografia</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/mdi_art.svg" alt=""><span class="disc-card-name">Artes</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/streamline_dictionary-language-book.svg" alt=""><span class="disc-card-name">Português</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/mingcute_paper-line.svg" alt=""><span class="disc-card-name">História</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/streamline_dictionary-language-book.svg" alt=""><span class="disc-card-name">Sociologia</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/streamline_dictionary-language-book.svg" alt=""><span class="disc-card-name">Filosofia</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/streamline_dictionary-language-book.svg" alt=""><span class="disc-card-name">Ed. Física</span></div>
+        <div class="disc-card"><img class="disc-icon" src="assets/Disciplinas/streamline_dictionary-language-book.svg" alt=""><span class="disc-card-name">Inglês</span></div>
+      </div>
+    </div>
+
+    <div id="page-calendario" class="page">
+      <h2 class="greeting">Calendário</h2>
+      <div class="calendario-wrap">
+        <img class="calendario-img" src="assets/Calendario/calendario.png" alt="Calendário"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <p class="calendario-fallback">Imagem não encontrada — verifique a pasta assets/Calendario</p>
+      </div>
+    </div>
+
+    <div id="page-ranking" class="page">
+      <h2 class="greeting">Ranking</h2>
+      <div class="ranking-list">
+        <div class="ranking-item ranking-item--gold">
+          <span class="ranking-pos">1</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Lays Aparecida Duarte Ferreira</span>
+          <span class="ranking-points">920</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">2</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Guilherme Augusto Souza</span>
+          <span class="ranking-points">900</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">3</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Vitor da Silva Dias</span>
+          <span class="ranking-points">850</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">4</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Caio Felipe Pereira Moreira</span>
+          <span class="ranking-points">800</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">5</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Jorge Wellerson de Souza Lima</span>
+          <span class="ranking-points">750</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">6</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Pablo Elias Caetano de Souza Silva</span>
+          <span class="ranking-points">700</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">7</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Patrick Wilson Ferreira Ribeiro Nunes</span>
+          <span class="ranking-points">650</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">8</span>
+          <img class="ranking-avatar" src="assets/Calendario/user.svg" alt="">
+          <span class="ranking-name">Victor Hugo Costa Mendonça</span>
+          <span class="ranking-points">600</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-logout-app" onclick="fazerLogout()">Sair</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

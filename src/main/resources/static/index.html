@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conexão Edu — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="verificarSessao()">
+<div class="container" id="auth-container">
+  <div class="form-login">
+    <h1 class="titulo">Conexão Edu</h1>
+    <p class="subtitulo">A escola mais perto de você!</p>
+    <div class="input-wrap wrap-email-login">
+      <img class="input-icon" src="assets/Tela de login/E-mail.svg" alt="">
+      <input class="input" type="email" placeholder="Insira seu e-mail">
+    </div>
+    <div class="input-wrap wrap-senha-login">
+      <img class="input-icon" src="assets/Tela de login/Outline/Status/Lock.svg" alt="">
+      <input class="input" type="password" placeholder="Insira sua senha">
+    </div>
+    <button class="botao botao-login" onclick="fazerLogin()">Entrar</button>
+    <p class="link esqueci">Esqueci minha senha?</p>
+    <p class="link conta">Não possui conta?</p>
+    <p class="link criar" onclick="mostrarCadastro()">Criar conta</p>
+  </div>
+
+  <div class="form-cadastro" style="display: none;">
+    <h1 class="titulo">Criar Conta</h1>
+    <p class="subtitulo">Preencha seus dados para começar</p>
+    <div class="input-wrap wrap-nome-cadastro">
+      <input class="input" type="text" placeholder="Seu nome">
+    </div>
+    <div class="input-wrap wrap-email-cadastro">
+      <img class="input-icon" src="assets/Tela de login/E-mail.svg" alt="">
+      <input class="input" type="email" placeholder="Insira seu e-mail">
+    </div>
+    <div class="input-wrap wrap-senha-cadastro">
+      <img class="input-icon" src="assets/Tela de login/Outline/Status/Lock.svg" alt="">
+      <input class="input" type="password" placeholder="Crie uma senha (mín. 6 caracteres)">
+    </div>
+    <button class="botao botao-cadastro" onclick="cadastrar()">Cadastrar</button>
+    <p class="link conta">Já possui conta?</p>
+    <p class="link criar" onclick="mostrarLogin()">Fazer login</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
